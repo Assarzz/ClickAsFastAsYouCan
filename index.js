@@ -13,7 +13,7 @@ function click(){
     if (mode == "blue"){
         screen.style.backgroundColor = "red";
         mode = "red";
-        msg.innerHTML = "Press as fast as you can when screen turns green";
+        msg.innerHTML = "Press as fast as you can when screen turns green!";
         // we set a timer until screen turns green
         time = 5+Math.random()*5;
         console.log(time);
@@ -27,7 +27,7 @@ function click(){
 
         screen.style.backgroundColor =  "rgb(0, 125, 179)";
         mode = "blue";
-        msg.innerHTML = "You pressed to early";
+        msg.innerHTML = "You pressed to early :(";
 
     }
     else if (mode== "green"){
@@ -50,6 +50,7 @@ function afterTimeWait(){
         // we can go ahead and run 
     console.log("we can go ahead and change bg to green");
     screen.style.backgroundColor = "green";
+    msg.innerHTML = "Click!"
     mode = "green";
     time1 = Date.now();
 }
