@@ -1,6 +1,7 @@
 
 let mode = "blue";
 const screen = document.getElementById("screen");
+const msg = document.getElementById("msg");
 let underProgress = false;
 
 let time1;
@@ -12,6 +13,7 @@ function click(){
     if (mode == "blue"){
         screen.style.backgroundColor = "red";
         mode = "red";
+        msg.innerHTML = "Press as fast as you can when screen turns green";
         // we set a timer until screen turns green
         time = 5+Math.random()*5;
         console.log(time);
@@ -25,7 +27,7 @@ function click(){
 
         screen.style.backgroundColor =  "rgb(0, 125, 179)";
         mode = "blue";
-        screen.innerHTML = "wait for screen to turn green";
+        msg.innerHTML = "You pressed to early";
 
     }
     else if (mode== "green"){
@@ -34,7 +36,7 @@ function click(){
         const duration = Date.now()- time1;
         console.log(duration);
         toString(duration)
-        screen.innerHTML = "you pressed in "+ duration +" milliseconds";
+        msg.innerHTML = "You pressed in "+ duration +" milliseconds";
     }
 
 
